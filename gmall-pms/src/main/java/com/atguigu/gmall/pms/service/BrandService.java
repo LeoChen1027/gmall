@@ -7,11 +7,11 @@ import com.atguigu.core.bean.QueryCondition;
 
 
 /**
- * Ʒ��
+ * 品牌表
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-08 15:32:00
+ * @date 2020-05-09 13:29:08
  */
 public interface BrandService extends IService<BrandEntity> {
 

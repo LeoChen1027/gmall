@@ -20,13 +20,13 @@ import com.atguigu.gmall.pms.service.SkuInfoService;
 
 
 /**
- * sku��Ϣ
+ * 库存单元表
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-08 15:32:00
+ * @date 2020-05-09 13:29:07
  */
-@Api(tags = "sku��Ϣ 管理")
+@Api(tags = "库存单元表 管理")
 @RestController
 @RequestMapping("pms/skuinfo")
 public class SkuInfoController {
@@ -50,10 +50,10 @@ public class SkuInfoController {
      * 信息
      */
     @ApiOperation("详情查询")
-    @GetMapping("/info/{skuId}")
+    @GetMapping("/info/{id}")
     @PreAuthorize("hasAuthority('pms:skuinfo:info')")
-    public Resp<SkuInfoEntity> info(@PathVariable("skuId") Long skuId){
-		SkuInfoEntity skuInfo = skuInfoService.getById(skuId);
+    public Resp<SkuInfoEntity> info(@PathVariable("id") Long id){
+		SkuInfoEntity skuInfo = skuInfoService.getById(id);
 
         return Resp.ok(skuInfo);
     }
@@ -88,8 +88,8 @@ public class SkuInfoController {
     @ApiOperation("删除")
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('pms:skuinfo:delete')")
-    public Resp<Object> delete(@RequestBody Long[] skuIds){
-		skuInfoService.removeByIds(Arrays.asList(skuIds));
+    public Resp<Object> delete(@RequestBody Long[] ids){
+		skuInfoService.removeByIds(Arrays.asList(ids));
 
         return Resp.ok(null);
     }

@@ -5,11 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * ��Ʒ���ۻظ���ϵ
+ * 产品评价回复表
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-08 15:32:00
+ * @date 2020-05-09 13:29:08
  */
 @Mapper
 public interface CommentReplayDao extends BaseMapper<CommentReplayEntity> {

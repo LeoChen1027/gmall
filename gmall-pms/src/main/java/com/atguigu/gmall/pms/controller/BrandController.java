@@ -20,13 +20,13 @@ import com.atguigu.gmall.pms.service.BrandService;
 
 
 /**
- * Ʒ��
+ * 品牌表
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-08 15:32:00
+ * @date 2020-05-09 13:29:08
  */
-@Api(tags = "Ʒ�� 管理")
+@Api(tags = "品牌表 管理")
 @RestController
 @RequestMapping("pms/brand")
 public class BrandController {
@@ -50,10 +50,10 @@ public class BrandController {
      * 信息
      */
     @ApiOperation("详情查询")
-    @GetMapping("/info/{brandId}")
+    @GetMapping("/info/{id}")
     @PreAuthorize("hasAuthority('pms:brand:info')")
-    public Resp<BrandEntity> info(@PathVariable("brandId") Long brandId){
-		BrandEntity brand = brandService.getById(brandId);
+    public Resp<BrandEntity> info(@PathVariable("id") Long id){
+		BrandEntity brand = brandService.getById(id);
 
         return Resp.ok(brand);
     }
@@ -88,8 +88,8 @@ public class BrandController {
     @ApiOperation("删除")
     @PostMapping("/delete")
     @PreAuthorize("hasAuthority('pms:brand:delete')")
-    public Resp<Object> delete(@RequestBody Long[] brandIds){
-		brandService.removeByIds(Arrays.asList(brandIds));
+    public Resp<Object> delete(@RequestBody Long[] ids){
+		brandService.removeByIds(Arrays.asList(ids));
 
         return Resp.ok(null);
     }

@@ -7,11 +7,11 @@ import com.atguigu.core.bean.QueryCondition;
 
 
 /**
- * sku��Ϣ
+ * 库存单元表
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-08 15:32:00
+ * @date 2020-05-09 13:29:07
  */
 public interface SkuInfoService extends IService<SkuInfoEntity> {
 

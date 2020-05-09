@@ -4,17 +4,16 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.math.BigDecimal;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
 
 /**
- * sku��Ϣ
+ * 库存单元表
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-08 15:32:00
+ * @date 2020-05-09 13:29:07
  */
 @ApiModel
 @Data
@@ -23,70 +22,50 @@ public class SkuInfoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * skuId
+	 * 库存id(itemID)
 	 */
 	@TableId
-	@ApiModelProperty(name = "skuId",value = "skuId")
-	private Long skuId;
+	@ApiModelProperty(name = "id",value = "库存id(itemID)")
+	private Long id;
 	/**
-	 * spuId
+	 * 商品id
 	 */
-	@ApiModelProperty(name = "spuId",value = "spuId")
-	private Long spuId;
+	@ApiModelProperty(name = "productId",value = "商品id")
+	private Long productId;
+	/**
+	 * 价格
+	 */
+	@ApiModelProperty(name = "price",value = "价格")
+	private Double price;
+	/**
+	 * sku名称
+	 */
+	@ApiModelProperty(name = "skuName",value = "sku名称")
+	private String skuName;
+	/**
+	 * 商品规格描述
+	 */
+	@ApiModelProperty(name = "skuDesc",value = "商品规格描述")
+	private String skuDesc;
 	/**
 	 * 
 	 */
-	@ApiModelProperty(name = "skuCode",value = "")
-	private String skuCode;
+	@ApiModelProperty(name = "weight",value = "")
+	private Double weight;
 	/**
-	 * sku����
+	 * 品牌(冗余)
 	 */
-	@ApiModelProperty(name = "skuName",value = "sku����")
-	private String skuName;
+	@ApiModelProperty(name = "tmId",value = "品牌(冗余)")
+	private Long tmId;
 	/**
-	 * sku��������
+	 * 三级分类id（冗余)
 	 */
-	@ApiModelProperty(name = "skuDesc",value = "sku��������")
-	private String skuDesc;
+	@ApiModelProperty(name = "catalog3Id",value = "三级分类id（冗余)")
+	private Long catalog3Id;
 	/**
-	 * �������id
+	 * 默认显示图片(冗余)
 	 */
-	@ApiModelProperty(name = "catalogId",value = "�������id")
-	private Long catalogId;
-	/**
-	 * Ʒ��id
-	 */
-	@ApiModelProperty(name = "brandId",value = "Ʒ��id")
-	private Long brandId;
-	/**
-	 * Ĭ��ͼƬ
-	 */
-	@ApiModelProperty(name = "skuDefaultImg",value = "Ĭ��ͼƬ")
+	@ApiModelProperty(name = "skuDefaultImg",value = "默认显示图片(冗余)")
 	private String skuDefaultImg;
-	/**
-	 * ����
-	 */
-	@ApiModelProperty(name = "skuTitle",value = "����")
-	private String skuTitle;
-	/**
-	 * ������
-	 */
-	@ApiModelProperty(name = "skuSubtitle",value = "������")
-	private String skuSubtitle;
-	/**
-	 * �۸�
-	 */
-	@ApiModelProperty(name = "price",value = "�۸�")
-	private BigDecimal price;
-	/**
-	 * ����
-	 */
-	@ApiModelProperty(name = "weight",value = "����")
-	private BigDecimal weight;
-	/**
-	 * ����
-	 */
-	@ApiModelProperty(name = "saleCount",value = "����")
-	private Long saleCount;
 
 }

@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * ��Ʒ���ۻظ���ϵ
+ * 产品评价回复表
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-08 15:32:00
+ * @date 2020-05-09 13:29:08
  */
 @ApiModel
 @Data
@@ -22,20 +22,40 @@ public class CommentReplayEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * id
+	 * 
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "id")
+	@ApiModelProperty(name = "id",value = "")
 	private Long id;
 	/**
-	 * ����id
+	 * 
 	 */
-	@ApiModelProperty(name = "commentId",value = "����id")
+	@ApiModelProperty(name = "commentId",value = "")
 	private Long commentId;
 	/**
-	 * �ظ�id
+	 * 
 	 */
-	@ApiModelProperty(name = "replyId",value = "�ظ�id")
-	private Long replyId;
+	@ApiModelProperty(name = "memberNickName",value = "")
+	private String memberNickName;
+	/**
+	 * 
+	 */
+	@ApiModelProperty(name = "memberIcon",value = "")
+	private String memberIcon;
+	/**
+	 * 
+	 */
+	@ApiModelProperty(name = "content",value = "")
+	private String content;
+	/**
+	 * 
+	 */
+	@ApiModelProperty(name = "createTime",value = "")
+	private Date createTime;
+	/**
+	 * 评论人员类型；0->会员；1->管理员
+	 */
+	@ApiModelProperty(name = "type",value = "评论人员类型；0->会员；1->管理员")
+	private Integer type;
 
 }

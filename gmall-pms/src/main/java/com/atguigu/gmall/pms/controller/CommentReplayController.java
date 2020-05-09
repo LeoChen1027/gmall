@@ -20,13 +20,13 @@ import com.atguigu.gmall.pms.service.CommentReplayService;
 
 
 /**
- * ��Ʒ���ۻظ���ϵ
+ * 产品评价回复表
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-08 15:32:00
+ * @date 2020-05-09 13:29:08
  */
-@Api(tags = "��Ʒ���ۻظ���ϵ 管理")
+@Api(tags = "产品评价回复表 管理")
 @RestController
 @RequestMapping("pms/commentreplay")
 public class CommentReplayController {
