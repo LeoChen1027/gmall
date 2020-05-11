@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 
+ * 商品库存
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:47:16
+ * @date 2020-05-10 20:51:41
  */
 @ApiModel
 @Data
@@ -22,35 +22,35 @@ public class WareSkuEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 编号
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "编号")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * skuid
+	 * sku_id
 	 */
-	@ApiModelProperty(name = "skuId",value = "skuid")
+	@ApiModelProperty(name = "skuId",value = "sku_id")
 	private Long skuId;
 	/**
 	 * 仓库id
 	 */
-	@ApiModelProperty(name = "warehouseId",value = "仓库id")
-	private Long warehouseId;
+	@ApiModelProperty(name = "wareId",value = "仓库id")
+	private Long wareId;
 	/**
 	 * 库存数
 	 */
 	@ApiModelProperty(name = "stock",value = "库存数")
 	private Integer stock;
 	/**
-	 * 存货名称
+	 * sku_name
 	 */
-	@ApiModelProperty(name = "stockName",value = "存货名称")
-	private String stockName;
+	@ApiModelProperty(name = "skuName",value = "sku_name")
+	private String skuName;
 	/**
-	 * 
+	 * 锁定库存
 	 */
-	@ApiModelProperty(name = "stockLocked",value = "")
+	@ApiModelProperty(name = "stockLocked",value = "锁定库存")
 	private Integer stockLocked;
 
 }

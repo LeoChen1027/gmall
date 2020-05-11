@@ -9,7 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:02:51
+ * @date 2020-05-10 20:47:24
  */
 @Mapper
 public interface OrderOperateHistoryDao extends BaseMapper<OrderOperateHistoryEntity> {

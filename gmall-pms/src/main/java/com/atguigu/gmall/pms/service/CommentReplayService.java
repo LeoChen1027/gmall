@@ -7,11 +7,11 @@ import com.atguigu.core.bean.QueryCondition;
 
 
 /**
- * 产品评价回复表
+ * 商品评价回复关系
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 13:29:08
+ * @date 2020-05-10 20:48:46
  */
 public interface CommentReplayService extends IService<CommentReplayEntity> {
 

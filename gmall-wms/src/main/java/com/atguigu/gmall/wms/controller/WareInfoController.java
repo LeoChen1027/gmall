@@ -20,13 +20,13 @@ import com.atguigu.gmall.wms.service.WareInfoService;
 
 
 /**
- * 
+ * 仓库信息
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:47:16
+ * @date 2020-05-10 20:51:41
  */
-@Api(tags = " 管理")
+@Api(tags = "仓库信息 管理")
 @RestController
 @RequestMapping("wms/wareinfo")
 public class WareInfoController {

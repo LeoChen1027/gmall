@@ -20,13 +20,13 @@ import com.atguigu.gmall.sms.service.CouponService;
 
 
 /**
- * 优惠卷表
+ * 优惠券信息
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 14:17:21
+ * @date 2020-05-10 20:49:45
  */
-@Api(tags = "优惠卷表 管理")
+@Api(tags = "优惠券信息 管理")
 @RestController
 @RequestMapping("sms/coupon")
 public class CouponController {

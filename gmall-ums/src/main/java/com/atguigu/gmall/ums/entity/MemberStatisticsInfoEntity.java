@@ -14,7 +14,7 @@ import lombok.Data;
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:17:12
+ * @date 2020-05-10 20:50:40
  */
 @ApiModel
 @Data
@@ -23,21 +23,26 @@ public class MemberStatisticsInfoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 
+	 * 会员id
 	 */
-	@ApiModelProperty(name = "memberId",value = "")
+	@ApiModelProperty(name = "memberId",value = "会员id")
 	private Long memberId;
 	/**
 	 * 累计消费金额
 	 */
 	@ApiModelProperty(name = "consumeAmount",value = "累计消费金额")
 	private BigDecimal consumeAmount;
+	/**
+	 * 累计优惠金额
+	 */
+	@ApiModelProperty(name = "couponAmount",value = "累计优惠金额")
+	private BigDecimal couponAmount;
 	/**
 	 * 订单数量
 	 */
@@ -74,34 +79,24 @@ public class MemberStatisticsInfoEntity implements Serializable {
 	@ApiModelProperty(name = "fansCount",value = "粉丝数量")
 	private Integer fansCount;
 	/**
-	 * 
+	 * 收藏的商品数量
 	 */
-	@ApiModelProperty(name = "collectProductCount",value = "")
+	@ApiModelProperty(name = "collectProductCount",value = "收藏的商品数量")
 	private Integer collectProductCount;
 	/**
-	 * 
+	 * 收藏的专题活动数量
 	 */
-	@ApiModelProperty(name = "collectSubjectCount",value = "")
+	@ApiModelProperty(name = "collectSubjectCount",value = "收藏的专题活动数量")
 	private Integer collectSubjectCount;
 	/**
-	 * 
+	 * 收藏的评论数量
 	 */
-	@ApiModelProperty(name = "collectTopicCount",value = "")
-	private Integer collectTopicCount;
-	/**
-	 * 
-	 */
-	@ApiModelProperty(name = "collectCommentCount",value = "")
+	@ApiModelProperty(name = "collectCommentCount",value = "收藏的评论数量")
 	private Integer collectCommentCount;
 	/**
-	 * 
+	 * 邀请的朋友数量
 	 */
-	@ApiModelProperty(name = "inviteFriendCount",value = "")
+	@ApiModelProperty(name = "inviteFriendCount",value = "邀请的朋友数量")
 	private Integer inviteFriendCount;
-	/**
-	 * 最后一次下订单时间
-	 */
-	@ApiModelProperty(name = "recentOrderTime",value = "最后一次下订单时间")
-	private Date recentOrderTime;
 
 }

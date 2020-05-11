@@ -7,11 +7,11 @@ import com.atguigu.core.bean.QueryCondition;
 
 
 /**
- * 优惠卷表
+ * 优惠券信息
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 14:17:21
+ * @date 2020-05-10 20:49:45
  */
 public interface CouponService extends IService<CouponEntity> {
 

@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 优惠券使用、领取历史表
+ * 优惠券领取历史记录
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 14:17:21
+ * @date 2020-05-10 20:49:45
  */
 @ApiModel
 @Data
@@ -22,60 +22,55 @@ public class CouponHistoryEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 
+	 * 优惠券id
 	 */
-	@ApiModelProperty(name = "couponId",value = "")
+	@ApiModelProperty(name = "couponId",value = "优惠券id")
 	private Long couponId;
 	/**
-	 * 
+	 * 会员id
 	 */
-	@ApiModelProperty(name = "memberId",value = "")
+	@ApiModelProperty(name = "memberId",value = "会员id")
 	private Long memberId;
 	/**
-	 * 
+	 * 会员名字
 	 */
-	@ApiModelProperty(name = "couponCode",value = "")
-	private String couponCode;
+	@ApiModelProperty(name = "memberNickName",value = "会员名字")
+	private String memberNickName;
 	/**
-	 * 领取人昵称
+	 * 获取方式[0->后台赠送；1->主动领取]
 	 */
-	@ApiModelProperty(name = "memberNickname",value = "领取人昵称")
-	private String memberNickname;
-	/**
-	 * 获取类型：0->后台赠送；1->主动获取
-	 */
-	@ApiModelProperty(name = "getType",value = "获取类型：0->后台赠送；1->主动获取")
+	@ApiModelProperty(name = "getType",value = "获取方式[0->后台赠送；1->主动领取]")
 	private Integer getType;
 	/**
-	 * 
+	 * 创建时间
 	 */
-	@ApiModelProperty(name = "createTime",value = "")
+	@ApiModelProperty(name = "createTime",value = "创建时间")
 	private Date createTime;
 	/**
-	 * 使用状态：0->未使用；1->已使用；2->已过期
+	 * 使用状态[0->未使用；1->已使用；2->已过期]
 	 */
-	@ApiModelProperty(name = "useStatus",value = "使用状态：0->未使用；1->已使用；2->已过期")
-	private Integer useStatus;
+	@ApiModelProperty(name = "useType",value = "使用状态[0->未使用；1->已使用；2->已过期]")
+	private Integer useType;
 	/**
 	 * 使用时间
 	 */
 	@ApiModelProperty(name = "useTime",value = "使用时间")
 	private Date useTime;
 	/**
-	 * 订单编号
+	 * 订单id
 	 */
-	@ApiModelProperty(name = "orderId",value = "订单编号")
+	@ApiModelProperty(name = "orderId",value = "订单id")
 	private Long orderId;
 	/**
-	 * 订单号码
+	 * 订单号
 	 */
-	@ApiModelProperty(name = "orderSn",value = "订单号码")
-	private String orderSn;
+	@ApiModelProperty(name = "orderSn",value = "订单号")
+	private Long orderSn;
 
 }

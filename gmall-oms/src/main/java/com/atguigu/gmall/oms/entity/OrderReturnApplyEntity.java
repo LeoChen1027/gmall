@@ -14,7 +14,7 @@ import lombok.Data;
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:02:51
+ * @date 2020-05-10 20:47:24
  */
 @ApiModel
 @Data
@@ -23,26 +23,21 @@ public class OrderReturnApplyEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 订单id
+	 * order_id
 	 */
-	@ApiModelProperty(name = "orderId",value = "订单id")
+	@ApiModelProperty(name = "orderId",value = "order_id")
 	private Long orderId;
-	/**
-	 * 收货地址表id
-	 */
-	@ApiModelProperty(name = "companyAddressId",value = "收货地址表id")
-	private Long companyAddressId;
 	/**
 	 * 退货商品id
 	 */
-	@ApiModelProperty(name = "productId",value = "退货商品id")
-	private Long productId;
+	@ApiModelProperty(name = "skuId",value = "退货商品id")
+	private Long skuId;
 	/**
 	 * 订单编号
 	 */
@@ -74,9 +69,9 @@ public class OrderReturnApplyEntity implements Serializable {
 	@ApiModelProperty(name = "returnPhone",value = "退货人电话")
 	private String returnPhone;
 	/**
-	 * 申请状态：0->待处理；1->退货中；2->已完成；3->已拒绝
+	 * 申请状态[0->待处理；1->退货中；2->已完成；3->已拒绝]
 	 */
-	@ApiModelProperty(name = "status",value = "申请状态：0->待处理；1->退货中；2->已完成；3->已拒绝")
+	@ApiModelProperty(name = "status",value = "申请状态[0->待处理；1->退货中；2->已完成；3->已拒绝]")
 	private Integer status;
 	/**
 	 * 处理时间
@@ -86,38 +81,38 @@ public class OrderReturnApplyEntity implements Serializable {
 	/**
 	 * 商品图片
 	 */
-	@ApiModelProperty(name = "productPic",value = "商品图片")
-	private String productPic;
+	@ApiModelProperty(name = "skuImg",value = "商品图片")
+	private String skuImg;
 	/**
 	 * 商品名称
 	 */
-	@ApiModelProperty(name = "productName",value = "商品名称")
-	private String productName;
+	@ApiModelProperty(name = "skuName",value = "商品名称")
+	private String skuName;
 	/**
 	 * 商品品牌
 	 */
-	@ApiModelProperty(name = "productBrand",value = "商品品牌")
-	private String productBrand;
+	@ApiModelProperty(name = "skuBrand",value = "商品品牌")
+	private String skuBrand;
 	/**
-	 * 商品销售属性：颜色：红色；尺码：xl;
+	 * 商品销售属性(JSON)
 	 */
-	@ApiModelProperty(name = "productAttr",value = "商品销售属性：颜色：红色；尺码：xl;")
-	private String productAttr;
+	@ApiModelProperty(name = "skuAttrsVals",value = "商品销售属性(JSON)")
+	private String skuAttrsVals;
 	/**
 	 * 退货数量
 	 */
-	@ApiModelProperty(name = "productCount",value = "退货数量")
-	private Integer productCount;
+	@ApiModelProperty(name = "skuCount",value = "退货数量")
+	private Integer skuCount;
 	/**
 	 * 商品单价
 	 */
-	@ApiModelProperty(name = "productPrice",value = "商品单价")
-	private BigDecimal productPrice;
+	@ApiModelProperty(name = "skuPrice",value = "商品单价")
+	private BigDecimal skuPrice;
 	/**
 	 * 商品实际支付单价
 	 */
-	@ApiModelProperty(name = "productRealPrice",value = "商品实际支付单价")
-	private BigDecimal productRealPrice;
+	@ApiModelProperty(name = "skuRealPrice",value = "商品实际支付单价")
+	private BigDecimal skuRealPrice;
 	/**
 	 * 原因
 	 */
@@ -126,13 +121,13 @@ public class OrderReturnApplyEntity implements Serializable {
 	/**
 	 * 描述
 	 */
-	@ApiModelProperty(name = "description",value = "描述")
-	private String description;
+	@ApiModelProperty(name = "description述",value = "描述")
+	private String description述;
 	/**
 	 * 凭证图片，以逗号隔开
 	 */
-	@ApiModelProperty(name = "proofPics",value = "凭证图片，以逗号隔开")
-	private String proofPics;
+	@ApiModelProperty(name = "descPics",value = "凭证图片，以逗号隔开")
+	private String descPics;
 	/**
 	 * 处理备注
 	 */
@@ -158,5 +153,15 @@ public class OrderReturnApplyEntity implements Serializable {
 	 */
 	@ApiModelProperty(name = "receiveNote",value = "收货备注")
 	private String receiveNote;
+	/**
+	 * 收货电话
+	 */
+	@ApiModelProperty(name = "receivePhone",value = "收货电话")
+	private String receivePhone;
+	/**
+	 * 公司收货地址
+	 */
+	@ApiModelProperty(name = "companyAddress",value = "公司收货地址")
+	private String companyAddress;
 
 }

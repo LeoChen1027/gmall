@@ -10,11 +10,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 订单表
+ * 订单
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:02:51
+ * @date 2020-05-10 20:47:24
  */
 @ApiModel
 @Data
@@ -23,45 +23,45 @@ public class OrderEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 订单id
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "订单id")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 
+	 * member_id
 	 */
-	@ApiModelProperty(name = "memberId",value = "")
+	@ApiModelProperty(name = "memberId",value = "member_id")
 	private Long memberId;
 	/**
-	 * 
+	 * 订单号
 	 */
-	@ApiModelProperty(name = "couponId",value = "")
-	private Long couponId;
-	/**
-	 * 订单编号
-	 */
-	@ApiModelProperty(name = "orderSn",value = "订单编号")
+	@ApiModelProperty(name = "orderSn",value = "订单号")
 	private String orderSn;
 	/**
-	 * 提交时间
+	 * 使用的优惠券
 	 */
-	@ApiModelProperty(name = "createTime",value = "提交时间")
+	@ApiModelProperty(name = "couponId",value = "使用的优惠券")
+	private Long couponId;
+	/**
+	 * create_time
+	 */
+	@ApiModelProperty(name = "createTime",value = "create_time")
 	private Date createTime;
 	/**
-	 * 用户帐号
+	 * 用户名
 	 */
-	@ApiModelProperty(name = "memberUsername",value = "用户帐号")
+	@ApiModelProperty(name = "memberUsername",value = "用户名")
 	private String memberUsername;
 	/**
-	 * 订单总金额
+	 * 订单总额
 	 */
-	@ApiModelProperty(name = "totalAmount",value = "订单总金额")
+	@ApiModelProperty(name = "totalAmount",value = "订单总额")
 	private BigDecimal totalAmount;
 	/**
-	 * 应付金额（实际支付金额）
+	 * 应付总额
 	 */
-	@ApiModelProperty(name = "payAmount",value = "应付金额（实际支付金额）")
+	@ApiModelProperty(name = "payAmount",value = "应付总额")
 	private BigDecimal payAmount;
 	/**
 	 * 运费金额
@@ -84,30 +84,25 @@ public class OrderEntity implements Serializable {
 	@ApiModelProperty(name = "couponAmount",value = "优惠券抵扣金额")
 	private BigDecimal couponAmount;
 	/**
-	 * 管理员后台调整订单使用的折扣金额
+	 * 后台调整订单使用的折扣金额
 	 */
-	@ApiModelProperty(name = "discountAmount",value = "管理员后台调整订单使用的折扣金额")
+	@ApiModelProperty(name = "discountAmount",value = "后台调整订单使用的折扣金额")
 	private BigDecimal discountAmount;
 	/**
-	 * 支付方式：0->未支付；1->支付宝；2->微信
+	 * 支付方式【1->支付宝；2->微信；3->银联； 4->货到付款；】
 	 */
-	@ApiModelProperty(name = "payType",value = "支付方式：0->未支付；1->支付宝；2->微信")
+	@ApiModelProperty(name = "payType",value = "支付方式【1->支付宝；2->微信；3->银联； 4->货到付款；】")
 	private Integer payType;
 	/**
-	 * 订单来源：0->PC订单；1->app订单
+	 * 订单来源[0->PC订单；1->app订单]
 	 */
-	@ApiModelProperty(name = "sourceType",value = "订单来源：0->PC订单；1->app订单")
+	@ApiModelProperty(name = "sourceType",value = "订单来源[0->PC订单；1->app订单]")
 	private Integer sourceType;
 	/**
-	 * 订单状态：0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单
+	 * 订单状态【0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单】
 	 */
-	@ApiModelProperty(name = "status",value = "订单状态：0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单")
+	@ApiModelProperty(name = "status",value = "订单状态【0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单】")
 	private Integer status;
-	/**
-	 * 订单类型：0->正常订单；1->秒杀订单
-	 */
-	@ApiModelProperty(name = "orderType",value = "订单类型：0->正常订单；1->秒杀订单")
-	private Integer orderType;
 	/**
 	 * 物流公司(配送方式)
 	 */
@@ -129,19 +124,14 @@ public class OrderEntity implements Serializable {
 	@ApiModelProperty(name = "integration",value = "可以获得的积分")
 	private Integer integration;
 	/**
-	 * 可以活动的成长值
+	 * 可以获得的成长值
 	 */
-	@ApiModelProperty(name = "growth",value = "可以活动的成长值")
+	@ApiModelProperty(name = "growth",value = "可以获得的成长值")
 	private Integer growth;
 	/**
-	 * 活动信息
+	 * 发票类型[0->不开发票；1->电子发票；2->纸质发票]
 	 */
-	@ApiModelProperty(name = "promotionInfo",value = "活动信息")
-	private String promotionInfo;
-	/**
-	 * 发票类型：0->不开发票；1->电子发票；2->纸质发票
-	 */
-	@ApiModelProperty(name = "billType",value = "发票类型：0->不开发票；1->电子发票；2->纸质发票")
+	@ApiModelProperty(name = "billType",value = "发票类型[0->不开发票；1->电子发票；2->纸质发票]")
 	private Integer billType;
 	/**
 	 * 发票抬头
@@ -204,14 +194,14 @@ public class OrderEntity implements Serializable {
 	@ApiModelProperty(name = "note",value = "订单备注")
 	private String note;
 	/**
-	 * 确认收货状态：0->未确认；1->已确认
+	 * 确认收货状态[0->未确认；1->已确认]
 	 */
-	@ApiModelProperty(name = "confirmStatus",value = "确认收货状态：0->未确认；1->已确认")
+	@ApiModelProperty(name = "confirmStatus",value = "确认收货状态[0->未确认；1->已确认]")
 	private Integer confirmStatus;
 	/**
-	 * 删除状态：0->未删除；1->已删除
+	 * 删除状态【0->未删除；1->已删除】
 	 */
-	@ApiModelProperty(name = "deleteStatus",value = "删除状态：0->未删除；1->已删除")
+	@ApiModelProperty(name = "deleteStatus",value = "删除状态【0->未删除；1->已删除】")
 	private Integer deleteStatus;
 	/**
 	 * 下单时使用的积分

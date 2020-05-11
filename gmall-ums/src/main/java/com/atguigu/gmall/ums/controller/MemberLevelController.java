@@ -20,13 +20,13 @@ import com.atguigu.gmall.ums.service.MemberLevelService;
 
 
 /**
- * 会员等级表
+ * 会员等级
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:17:12
+ * @date 2020-05-10 20:50:40
  */
-@Api(tags = "会员等级表 管理")
+@Api(tags = "会员等级 管理")
 @RestController
 @RequestMapping("ums/memberlevel")
 public class MemberLevelController {

@@ -5,11 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 库存单元表
+ * sku信息
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 13:29:07
+ * @date 2020-05-10 20:48:46
  */
 @Mapper
 public interface SkuInfoDao extends BaseMapper<SkuInfoEntity> {

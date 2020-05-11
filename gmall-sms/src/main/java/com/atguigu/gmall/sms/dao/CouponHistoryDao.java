@@ -5,11 +5,11 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 优惠券使用、领取历史表
+ * 优惠券领取历史记录
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 14:17:21
+ * @date 2020-05-10 20:49:45
  */
 @Mapper
 public interface CouponHistoryDao extends BaseMapper<CouponHistoryEntity> {

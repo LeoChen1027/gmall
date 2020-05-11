@@ -24,7 +24,7 @@ import com.atguigu.gmall.ums.service.MemberLoginLogService;
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:17:12
+ * @date 2020-05-10 20:50:40
  */
 @Api(tags = "会员登录记录 管理")
 @RestController

@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 会员收货地址表
+ * 会员收货地址
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:17:12
+ * @date 2020-05-10 20:50:40
  */
 @ApiModel
 @Data
@@ -22,31 +22,26 @@ public class MemberReceiveAddressEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 
+	 * member_id
 	 */
-	@ApiModelProperty(name = "memberId",value = "")
+	@ApiModelProperty(name = "memberId",value = "member_id")
 	private Long memberId;
 	/**
-	 * 收货人名称
+	 * 收货人姓名
 	 */
-	@ApiModelProperty(name = "name",value = "收货人名称")
+	@ApiModelProperty(name = "name",value = "收货人姓名")
 	private String name;
 	/**
-	 * 
+	 * 电话
 	 */
-	@ApiModelProperty(name = "phoneNumber",value = "")
-	private String phoneNumber;
-	/**
-	 * 是否为默认
-	 */
-	@ApiModelProperty(name = "defaultStatus",value = "是否为默认")
-	private Integer defaultStatus;
+	@ApiModelProperty(name = "phone",value = "电话")
+	private String phone;
 	/**
 	 * 邮政编码
 	 */
@@ -72,5 +67,15 @@ public class MemberReceiveAddressEntity implements Serializable {
 	 */
 	@ApiModelProperty(name = "detailAddress",value = "详细地址(街道)")
 	private String detailAddress;
+	/**
+	 * 省市区代码
+	 */
+	@ApiModelProperty(name = "areacode",value = "省市区代码")
+	private String areacode;
+	/**
+	 * 是否默认
+	 */
+	@ApiModelProperty(name = "defaultStatus",value = "是否默认")
+	private Integer defaultStatus;
 
 }

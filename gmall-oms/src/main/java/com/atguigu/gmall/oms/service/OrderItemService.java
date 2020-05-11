@@ -7,11 +7,11 @@ import com.atguigu.core.bean.QueryCondition;
 
 
 /**
- * 订单中所包含的商品
+ * 订单项信息
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:02:51
+ * @date 2020-05-10 20:47:24
  */
 public interface OrderItemService extends IService<OrderItemEntity> {
 

@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 会员表
+ * 会员
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:17:12
+ * @date 2020-05-10 20:50:40
  */
 @ApiModel
 @Data
@@ -22,16 +22,16 @@ public class MemberEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 
+	 * 会员等级id
 	 */
-	@ApiModelProperty(name = "memberLevelId",value = "")
-	private Long memberLevelId;
+	@ApiModelProperty(name = "levelId",value = "会员等级id")
+	private Long levelId;
 	/**
 	 * 用户名
 	 */
@@ -50,37 +50,37 @@ public class MemberEntity implements Serializable {
 	/**
 	 * 手机号码
 	 */
-	@ApiModelProperty(name = "phone",value = "手机号码")
-	private String phone;
+	@ApiModelProperty(name = "mobile",value = "手机号码")
+	private String mobile;
 	/**
-	 * 帐号启用状态:0->禁用；1->启用
+	 * 邮箱
 	 */
-	@ApiModelProperty(name = "status",value = "帐号启用状态:0->禁用；1->启用")
-	private Integer status;
+	@ApiModelProperty(name = "email",value = "邮箱")
+	private String email;
 	/**
-	 * 注册时间
+	 * 盐
 	 */
-	@ApiModelProperty(name = "createTime",value = "注册时间")
-	private Date createTime;
+	@ApiModelProperty(name = "salt",value = "盐")
+	private String salt;
 	/**
 	 * 头像
 	 */
-	@ApiModelProperty(name = "icon",value = "头像")
-	private String icon;
+	@ApiModelProperty(name = "header",value = "头像")
+	private String header;
 	/**
-	 * 性别：0->未知；1->男；2->女
+	 * 性别
 	 */
-	@ApiModelProperty(name = "gender",value = "性别：0->未知；1->男；2->女")
+	@ApiModelProperty(name = "gender",value = "性别")
 	private Integer gender;
 	/**
 	 * 生日
 	 */
-	@ApiModelProperty(name = "birthday",value = "生日")
-	private Date birthday;
+	@ApiModelProperty(name = "birth",value = "生日")
+	private Date birth;
 	/**
-	 * 所做城市
+	 * 所在城市
 	 */
-	@ApiModelProperty(name = "city",value = "所做城市")
+	@ApiModelProperty(name = "city",value = "所在城市")
 	private String city;
 	/**
 	 * 职业
@@ -90,8 +90,8 @@ public class MemberEntity implements Serializable {
 	/**
 	 * 个性签名
 	 */
-	@ApiModelProperty(name = "personalizedSignature",value = "个性签名")
-	private String personalizedSignature;
+	@ApiModelProperty(name = "sign",value = "个性签名")
+	private String sign;
 	/**
 	 * 用户来源
 	 */
@@ -108,14 +108,14 @@ public class MemberEntity implements Serializable {
 	@ApiModelProperty(name = "growth",value = "成长值")
 	private Integer growth;
 	/**
-	 * 剩余抽奖次数
+	 * 启用状态
 	 */
-	@ApiModelProperty(name = "luckeyCount",value = "剩余抽奖次数")
-	private Integer luckeyCount;
+	@ApiModelProperty(name = "status",value = "启用状态")
+	private Integer status;
 	/**
-	 * 历史积分数量
+	 * 注册时间
 	 */
-	@ApiModelProperty(name = "historyIntegration",value = "历史积分数量")
-	private Integer historyIntegration;
+	@ApiModelProperty(name = "createTime",value = "注册时间")
+	private Date createTime;
 
 }

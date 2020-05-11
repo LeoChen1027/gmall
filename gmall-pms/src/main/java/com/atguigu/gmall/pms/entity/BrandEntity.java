@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 品牌表
+ * 品牌
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 13:29:08
+ * @date 2020-05-10 20:48:46
  */
 @ApiModel
 @Data
@@ -22,60 +22,40 @@ public class BrandEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * 品牌id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
-	private Long id;
+	@ApiModelProperty(name = "brandId",value = "品牌id")
+	private Long brandId;
 	/**
-	 * 
+	 * 品牌名
 	 */
-	@ApiModelProperty(name = "name",value = "")
+	@ApiModelProperty(name = "name",value = "品牌名")
 	private String name;
 	/**
-	 * 首字母
+	 * 品牌logo地址
 	 */
-	@ApiModelProperty(name = "firstLetter",value = "首字母")
-	private String firstLetter;
-	/**
-	 * 
-	 */
-	@ApiModelProperty(name = "sort",value = "")
-	private Integer sort;
-	/**
-	 * 是否为品牌制造商：0->不是；1->是
-	 */
-	@ApiModelProperty(name = "factoryStatus",value = "是否为品牌制造商：0->不是；1->是")
-	private Integer factoryStatus;
-	/**
-	 * 
-	 */
-	@ApiModelProperty(name = "showStatus",value = "")
-	private Integer showStatus;
-	/**
-	 * 产品数量
-	 */
-	@ApiModelProperty(name = "productCount",value = "产品数量")
-	private Integer productCount;
-	/**
-	 * 产品评论数量
-	 */
-	@ApiModelProperty(name = "productCommentCount",value = "产品评论数量")
-	private Integer productCommentCount;
-	/**
-	 * 品牌logo
-	 */
-	@ApiModelProperty(name = "logo",value = "品牌logo")
+	@ApiModelProperty(name = "logo",value = "品牌logo地址")
 	private String logo;
 	/**
-	 * 专区大图
+	 * 介绍
 	 */
-	@ApiModelProperty(name = "bigPic",value = "专区大图")
-	private String bigPic;
+	@ApiModelProperty(name = "descript",value = "介绍")
+	private String descript;
 	/**
-	 * 品牌故事
+	 * 显示状态[0-不显示；1-显示]
 	 */
-	@ApiModelProperty(name = "brandStory",value = "品牌故事")
-	private String brandStory;
+	@ApiModelProperty(name = "showStatus",value = "显示状态[0-不显示；1-显示]")
+	private Integer showStatus;
+	/**
+	 * 检索首字母
+	 */
+	@ApiModelProperty(name = "firstLetter",value = "检索首字母")
+	private String firstLetter;
+	/**
+	 * 排序
+	 */
+	@ApiModelProperty(name = "sort",value = "排序")
+	private Integer sort;
 
 }

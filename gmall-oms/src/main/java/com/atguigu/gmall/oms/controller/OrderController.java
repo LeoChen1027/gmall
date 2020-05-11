@@ -20,13 +20,13 @@ import com.atguigu.gmall.oms.service.OrderService;
 
 
 /**
- * 订单表
+ * 订单
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:02:51
+ * @date 2020-05-10 20:47:24
  */
-@Api(tags = "订单表 管理")
+@Api(tags = "订单 管理")
 @RestController
 @RequestMapping("oms/order")
 public class OrderController {

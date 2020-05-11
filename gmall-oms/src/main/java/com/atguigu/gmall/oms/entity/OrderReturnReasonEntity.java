@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 退货原因表
+ * 退货原因
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:02:51
+ * @date 2020-05-10 20:47:24
  */
 @ApiModel
 @Data
@@ -22,30 +22,30 @@ public class OrderReturnReasonEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 退货类型
+	 * 退货原因名
 	 */
-	@ApiModelProperty(name = "name",value = "退货类型")
+	@ApiModelProperty(name = "name",value = "退货原因名")
 	private String name;
 	/**
-	 * 
+	 * 排序
 	 */
-	@ApiModelProperty(name = "sort",value = "")
+	@ApiModelProperty(name = "sort",value = "排序")
 	private Integer sort;
 	/**
-	 * 状态：0->不启用；1->启用
+	 * 启用状态
 	 */
-	@ApiModelProperty(name = "status",value = "状态：0->不启用；1->启用")
+	@ApiModelProperty(name = "status",value = "启用状态")
 	private Integer status;
 	/**
-	 * 添加时间
+	 * create_time
 	 */
-	@ApiModelProperty(name = "createTime",value = "添加时间")
+	@ApiModelProperty(name = "createTime",value = "create_time")
 	private Date createTime;
 
 }

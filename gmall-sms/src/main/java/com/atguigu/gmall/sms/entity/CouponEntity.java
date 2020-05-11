@@ -10,11 +10,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 优惠卷表
+ * 优惠券信息
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 14:17:21
+ * @date 2020-05-10 20:49:45
  */
 @ApiModel
 @Data
@@ -23,31 +23,31 @@ public class CouponEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 优惠卷类型；0->全场赠券；1->会员赠券；2->购物赠券；3->注册赠券
+	 * 优惠卷类型[0->全场赠券；1->会员赠券；2->购物赠券；3->注册赠券]
 	 */
-	@ApiModelProperty(name = "type",value = "优惠卷类型；0->全场赠券；1->会员赠券；2->购物赠券；3->注册赠券")
-	private Integer type;
+	@ApiModelProperty(name = "couponType",value = "优惠卷类型[0->全场赠券；1->会员赠券；2->购物赠券；3->注册赠券]")
+	private Integer couponType;
 	/**
-	 * 
+	 * 优惠券图片
 	 */
-	@ApiModelProperty(name = "name",value = "")
-	private String name;
+	@ApiModelProperty(name = "couponImg",value = "优惠券图片")
+	private String couponImg;
 	/**
-	 * 使用平台：0->全部；1->移动；2->PC
+	 * 优惠卷名字
 	 */
-	@ApiModelProperty(name = "platform",value = "使用平台：0->全部；1->移动；2->PC")
-	private Integer platform;
+	@ApiModelProperty(name = "couponName",value = "优惠卷名字")
+	private String couponName;
 	/**
 	 * 数量
 	 */
-	@ApiModelProperty(name = "count",value = "数量")
-	private Integer count;
+	@ApiModelProperty(name = "num",value = "数量")
+	private Integer num;
 	/**
 	 * 金额
 	 */
@@ -59,24 +59,24 @@ public class CouponEntity implements Serializable {
 	@ApiModelProperty(name = "perLimit",value = "每人限领张数")
 	private Integer perLimit;
 	/**
-	 * 使用门槛；0表示无门槛
+	 * 使用门槛
 	 */
-	@ApiModelProperty(name = "minPoint",value = "使用门槛；0表示无门槛")
+	@ApiModelProperty(name = "minPoint",value = "使用门槛")
 	private BigDecimal minPoint;
 	/**
-	 * 
+	 * 开始时间
 	 */
-	@ApiModelProperty(name = "startTime",value = "")
+	@ApiModelProperty(name = "startTime",value = "开始时间")
 	private Date startTime;
 	/**
-	 * 
+	 * 结束时间
 	 */
-	@ApiModelProperty(name = "endTime",value = "")
+	@ApiModelProperty(name = "endTime",value = "结束时间")
 	private Date endTime;
 	/**
-	 * 使用类型：0->全场通用；1->指定分类；2->指定商品
+	 * 使用类型[0->全场通用；1->指定分类；2->指定商品]
 	 */
-	@ApiModelProperty(name = "useType",value = "使用类型：0->全场通用；1->指定分类；2->指定商品")
+	@ApiModelProperty(name = "useType",value = "使用类型[0->全场通用；1->指定分类；2->指定商品]")
 	private Integer useType;
 	/**
 	 * 备注
@@ -99,19 +99,29 @@ public class CouponEntity implements Serializable {
 	@ApiModelProperty(name = "receiveCount",value = "领取数量")
 	private Integer receiveCount;
 	/**
-	 * 可以领取的日期
+	 * 可以领取的开始日期
 	 */
-	@ApiModelProperty(name = "enableTime",value = "可以领取的日期")
-	private Date enableTime;
+	@ApiModelProperty(name = "enableStartTime",value = "可以领取的开始日期")
+	private Date enableStartTime;
+	/**
+	 * 可以领取的结束日期
+	 */
+	@ApiModelProperty(name = "enableEndTime",value = "可以领取的结束日期")
+	private Date enableEndTime;
 	/**
 	 * 优惠码
 	 */
 	@ApiModelProperty(name = "code",value = "优惠码")
 	private String code;
 	/**
-	 * 可领取的会员类型：0->无限时
+	 * 可以领取的会员等级[0->不限等级，其他-对应等级]
 	 */
-	@ApiModelProperty(name = "memberLevel",value = "可领取的会员类型：0->无限时")
+	@ApiModelProperty(name = "memberLevel",value = "可以领取的会员等级[0->不限等级，其他-对应等级]")
 	private Integer memberLevel;
+	/**
+	 * 发布状态[0-未发布，1-已发布]
+	 */
+	@ApiModelProperty(name = "publish",value = "发布状态[0-未发布，1-已发布]")
+	private Integer publish;
 
 }

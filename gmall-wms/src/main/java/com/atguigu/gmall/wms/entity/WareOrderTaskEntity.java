@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 库存工作单表 库存工作单表
+ * 库存工作单
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:47:16
+ * @date 2020-05-10 20:51:41
  */
 @ApiModel
 @Data
@@ -22,16 +22,21 @@ public class WareOrderTaskEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 编号
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "编号")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 订单编号
+	 * order_id
 	 */
-	@ApiModelProperty(name = "orderId",value = "订单编号")
+	@ApiModelProperty(name = "orderId",value = "order_id")
 	private Long orderId;
+	/**
+	 * order_sn
+	 */
+	@ApiModelProperty(name = "orderSn",value = "order_sn")
+	private String orderSn;
 	/**
 	 * 收货人
 	 */
@@ -43,9 +48,9 @@ public class WareOrderTaskEntity implements Serializable {
 	@ApiModelProperty(name = "consigneeTel",value = "收货人电话")
 	private String consigneeTel;
 	/**
-	 * 送货地址
+	 * 配送地址
 	 */
-	@ApiModelProperty(name = "deliveryAddress",value = "送货地址")
+	@ApiModelProperty(name = "deliveryAddress",value = "配送地址")
 	private String deliveryAddress;
 	/**
 	 * 订单备注
@@ -53,15 +58,15 @@ public class WareOrderTaskEntity implements Serializable {
 	@ApiModelProperty(name = "orderComment",value = "订单备注")
 	private String orderComment;
 	/**
-	 * 付款方式 1:在线付款 2:货到付款
+	 * 付款方式【 1:在线付款 2:货到付款】
 	 */
-	@ApiModelProperty(name = "paymentWay",value = "付款方式 1:在线付款 2:货到付款")
-	private String paymentWay;
+	@ApiModelProperty(name = "paymentWay",value = "付款方式【 1:在线付款 2:货到付款】")
+	private Integer paymentWay;
 	/**
-	 * 
+	 * 任务状态
 	 */
-	@ApiModelProperty(name = "taskStatus",value = "")
-	private String taskStatus;
+	@ApiModelProperty(name = "taskStatus",value = "任务状态")
+	private Integer taskStatus;
 	/**
 	 * 订单描述
 	 */
@@ -73,14 +78,14 @@ public class WareOrderTaskEntity implements Serializable {
 	@ApiModelProperty(name = "trackingNo",value = "物流单号")
 	private String trackingNo;
 	/**
-	 * 创建时间
+	 * create_time
 	 */
-	@ApiModelProperty(name = "createTime",value = "创建时间")
+	@ApiModelProperty(name = "createTime",value = "create_time")
 	private Date createTime;
 	/**
-	 * 仓库编号
+	 * 仓库id
 	 */
-	@ApiModelProperty(name = "wareId",value = "仓库编号")
+	@ApiModelProperty(name = "wareId",value = "仓库id")
 	private Long wareId;
 	/**
 	 * 工作单备注

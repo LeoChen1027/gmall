@@ -13,7 +13,7 @@ import lombok.Data;
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:02:51
+ * @date 2020-05-10 20:47:24
  */
 @ApiModel
 @Data
@@ -22,10 +22,10 @@ public class OrderOperateHistoryEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
 	 * 订单id
@@ -33,9 +33,9 @@ public class OrderOperateHistoryEntity implements Serializable {
 	@ApiModelProperty(name = "orderId",value = "订单id")
 	private Long orderId;
 	/**
-	 * 操作人：用户；系统；后台管理员
+	 * 操作人[用户；系统；后台管理员]
 	 */
-	@ApiModelProperty(name = "operateMan",value = "操作人：用户；系统；后台管理员")
+	@ApiModelProperty(name = "operateMan",value = "操作人[用户；系统；后台管理员]")
 	private String operateMan;
 	/**
 	 * 操作时间
@@ -43,9 +43,9 @@ public class OrderOperateHistoryEntity implements Serializable {
 	@ApiModelProperty(name = "createTime",value = "操作时间")
 	private Date createTime;
 	/**
-	 * 订单状态：0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单
+	 * 订单状态【0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单】
 	 */
-	@ApiModelProperty(name = "orderStatus",value = "订单状态：0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单")
+	@ApiModelProperty(name = "orderStatus",value = "订单状态【0->待付款；1->待发货；2->已发货；3->已完成；4->已关闭；5->无效订单】")
 	private Integer orderStatus;
 	/**
 	 * 备注

@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 
+ * 仓库信息
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:47:16
+ * @date 2020-05-10 20:51:41
  */
 @ApiModel
 @Data
@@ -22,25 +22,25 @@ public class WareInfoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 
+	 * 仓库名
 	 */
-	@ApiModelProperty(name = "name",value = "")
+	@ApiModelProperty(name = "name",value = "仓库名")
 	private String name;
 	/**
-	 * 
+	 * 仓库地址
 	 */
-	@ApiModelProperty(name = "address",value = "")
+	@ApiModelProperty(name = "address",value = "仓库地址")
 	private String address;
 	/**
-	 * 
+	 * 区域编码
 	 */
-	@ApiModelProperty(name = "areacode",value = "")
+	@ApiModelProperty(name = "areacode",value = "区域编码")
 	private String areacode;
 
 }

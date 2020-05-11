@@ -4,16 +4,17 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.math.BigDecimal;
 import java.io.Serializable;
 import java.util.Date;
 import lombok.Data;
 
 /**
- * 库存单元表
+ * sku信息
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 13:29:07
+ * @date 2020-05-10 20:48:46
  */
 @ApiModel
 @Data
@@ -22,50 +23,65 @@ public class SkuInfoEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 库存id(itemID)
+	 * skuId
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "库存id(itemID)")
-	private Long id;
+	@ApiModelProperty(name = "skuId",value = "skuId")
+	private Long skuId;
 	/**
-	 * 商品id
+	 * spuId
 	 */
-	@ApiModelProperty(name = "productId",value = "商品id")
-	private Long productId;
+	@ApiModelProperty(name = "spuId",value = "spuId")
+	private Long spuId;
 	/**
-	 * 价格
+	 * 
 	 */
-	@ApiModelProperty(name = "price",value = "价格")
-	private Double price;
+	@ApiModelProperty(name = "skuCode",value = "")
+	private String skuCode;
 	/**
 	 * sku名称
 	 */
 	@ApiModelProperty(name = "skuName",value = "sku名称")
 	private String skuName;
 	/**
-	 * 商品规格描述
+	 * sku介绍描述
 	 */
-	@ApiModelProperty(name = "skuDesc",value = "商品规格描述")
+	@ApiModelProperty(name = "skuDesc",value = "sku介绍描述")
 	private String skuDesc;
 	/**
-	 * 
+	 * 所属分类id
 	 */
-	@ApiModelProperty(name = "weight",value = "")
-	private Double weight;
+	@ApiModelProperty(name = "catalogId",value = "所属分类id")
+	private Long catalogId;
 	/**
-	 * 品牌(冗余)
+	 * 品牌id
 	 */
-	@ApiModelProperty(name = "tmId",value = "品牌(冗余)")
-	private Long tmId;
+	@ApiModelProperty(name = "brandId",value = "品牌id")
+	private Long brandId;
 	/**
-	 * 三级分类id（冗余)
+	 * 默认图片
 	 */
-	@ApiModelProperty(name = "catalog3Id",value = "三级分类id（冗余)")
-	private Long catalog3Id;
-	/**
-	 * 默认显示图片(冗余)
-	 */
-	@ApiModelProperty(name = "skuDefaultImg",value = "默认显示图片(冗余)")
+	@ApiModelProperty(name = "skuDefaultImg",value = "默认图片")
 	private String skuDefaultImg;
+	/**
+	 * 标题
+	 */
+	@ApiModelProperty(name = "skuTitle",value = "标题")
+	private String skuTitle;
+	/**
+	 * 副标题
+	 */
+	@ApiModelProperty(name = "skuSubtitle",value = "副标题")
+	private String skuSubtitle;
+	/**
+	 * 价格
+	 */
+	@ApiModelProperty(name = "price",value = "价格")
+	private BigDecimal price;
+	/**
+	 * 重量
+	 */
+	@ApiModelProperty(name = "weight",value = "重量")
+	private BigDecimal weight;
 
 }

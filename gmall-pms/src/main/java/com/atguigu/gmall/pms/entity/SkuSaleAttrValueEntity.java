@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * sku销售属性值
+ * sku销售属性&值
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 13:29:07
+ * @date 2020-05-10 20:48:46
  */
 @ApiModel
 @Data
@@ -28,29 +28,29 @@ public class SkuSaleAttrValueEntity implements Serializable {
 	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 库存单元id
+	 * sku_id
 	 */
-	@ApiModelProperty(name = "skuId",value = "库存单元id")
+	@ApiModelProperty(name = "skuId",value = "sku_id")
 	private Long skuId;
 	/**
-	 * 销售属性id（冗余)
+	 * attr_id
 	 */
-	@ApiModelProperty(name = "saleAttrId",value = "销售属性id（冗余)")
-	private Long saleAttrId;
+	@ApiModelProperty(name = "attrId",value = "attr_id")
+	private Long attrId;
 	/**
-	 * 销售属性值id
+	 * 销售属性名
 	 */
-	@ApiModelProperty(name = "saleAttrValueId",value = "销售属性值id")
-	private Long saleAttrValueId;
+	@ApiModelProperty(name = "attrName",value = "销售属性名")
+	private String attrName;
 	/**
-	 * 销售属性名称(冗余)
+	 * 销售属性值
 	 */
-	@ApiModelProperty(name = "saleAttrName",value = "销售属性名称(冗余)")
-	private String saleAttrName;
+	@ApiModelProperty(name = "attrValue",value = "销售属性值")
+	private String attrValue;
 	/**
-	 * 销售属性值名称(冗余)
+	 * 顺序
 	 */
-	@ApiModelProperty(name = "saleAttrValueName",value = "销售属性值名称(冗余)")
-	private String saleAttrValueName;
+	@ApiModelProperty(name = "attrSort",value = "顺序")
+	private Integer attrSort;
 
 }

@@ -13,7 +13,7 @@ import lombok.Data;
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:17:12
+ * @date 2020-05-10 20:50:40
  */
 @ApiModel
 @Data
@@ -22,40 +22,35 @@ public class MemberLoginLogEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 
+	 * member_id
 	 */
-	@ApiModelProperty(name = "memberId",value = "")
+	@ApiModelProperty(name = "memberId",value = "member_id")
 	private Long memberId;
 	/**
-	 * 
+	 * 创建时间
 	 */
-	@ApiModelProperty(name = "createTime",value = "")
+	@ApiModelProperty(name = "createTime",value = "创建时间")
 	private Date createTime;
 	/**
-	 * 
+	 * ip
 	 */
-	@ApiModelProperty(name = "ip",value = "")
+	@ApiModelProperty(name = "ip",value = "ip")
 	private String ip;
 	/**
-	 * 
+	 * city
 	 */
-	@ApiModelProperty(name = "city",value = "")
+	@ApiModelProperty(name = "city",value = "city")
 	private String city;
 	/**
-	 * 登录类型：0->PC；1->android;2->ios;3->小程序
+	 * 登录类型[1-web，2-app]
 	 */
-	@ApiModelProperty(name = "loginType",value = "登录类型：0->PC；1->android;2->ios;3->小程序")
+	@ApiModelProperty(name = "loginType",value = "登录类型[1-web，2-app]")
 	private Integer loginType;
-	/**
-	 * 
-	 */
-	@ApiModelProperty(name = "province",value = "")
-	private String province;
 
 }

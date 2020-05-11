@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 
+ * 库存工作单
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:47:16
+ * @date 2020-05-10 20:51:41
  */
 @ApiModel
 @Data
@@ -22,10 +22,10 @@ public class WareOrderTaskDetailEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 编号
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "编号")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
 	 * sku_id
@@ -33,24 +33,19 @@ public class WareOrderTaskDetailEntity implements Serializable {
 	@ApiModelProperty(name = "skuId",value = "sku_id")
 	private Long skuId;
 	/**
-	 * sku名称
+	 * sku_name
 	 */
-	@ApiModelProperty(name = "skuName",value = "sku名称")
+	@ApiModelProperty(name = "skuName",value = "sku_name")
 	private String skuName;
 	/**
 	 * 购买个数
 	 */
-	@ApiModelProperty(name = "skuNums",value = "购买个数")
-	private Integer skuNums;
-	/**
-	 * 工作单编号
-	 */
-	@ApiModelProperty(name = "taskId",value = "工作单编号")
-	private Long taskId;
-	/**
-	 * 
-	 */
-	@ApiModelProperty(name = "skuNum",value = "")
+	@ApiModelProperty(name = "skuNum",value = "购买个数")
 	private Integer skuNum;
+	/**
+	 * 工作单id
+	 */
+	@ApiModelProperty(name = "taskId",value = "工作单id")
+	private Long taskId;
 
 }

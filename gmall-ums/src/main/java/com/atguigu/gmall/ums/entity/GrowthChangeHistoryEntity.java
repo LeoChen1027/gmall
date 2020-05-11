@@ -9,11 +9,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 成长值变化历史记录表
+ * 成长值变化历史记录
  * 
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:17:12
+ * @date 2020-05-10 20:50:40
  */
 @ApiModel
 @Data
@@ -22,45 +22,35 @@ public class GrowthChangeHistoryEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * 
+	 * id
 	 */
 	@TableId
-	@ApiModelProperty(name = "id",value = "")
+	@ApiModelProperty(name = "id",value = "id")
 	private Long id;
 	/**
-	 * 
+	 * member_id
 	 */
-	@ApiModelProperty(name = "memberId",value = "")
+	@ApiModelProperty(name = "memberId",value = "member_id")
 	private Long memberId;
 	/**
-	 * 
+	 * create_time
 	 */
-	@ApiModelProperty(name = "createTime",value = "")
+	@ApiModelProperty(name = "createTime",value = "create_time")
 	private Date createTime;
 	/**
-	 * 改变类型：0->增加；1->减少
+	 * 改变的值（正负计数）
 	 */
-	@ApiModelProperty(name = "changeType",value = "改变类型：0->增加；1->减少")
-	private Integer changeType;
-	/**
-	 * 积分改变数量
-	 */
-	@ApiModelProperty(name = "changeCount",value = "积分改变数量")
+	@ApiModelProperty(name = "changeCount",value = "改变的值（正负计数）")
 	private Integer changeCount;
 	/**
-	 * 操作人员
+	 * 备注
 	 */
-	@ApiModelProperty(name = "operateMan",value = "操作人员")
-	private String operateMan;
+	@ApiModelProperty(name = "note",value = "备注")
+	private String note;
 	/**
-	 * 操作备注
+	 * 积分来源[0-购物，1-管理员修改]
 	 */
-	@ApiModelProperty(name = "operateNote",value = "操作备注")
-	private String operateNote;
-	/**
-	 * 积分来源：0->购物；1->管理员修改
-	 */
-	@ApiModelProperty(name = "sourceType",value = "积分来源：0->购物；1->管理员修改")
+	@ApiModelProperty(name = "sourceType",value = "积分来源[0-购物，1-管理员修改]")
 	private Integer sourceType;
 
 }

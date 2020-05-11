@@ -20,13 +20,13 @@ import com.atguigu.gmall.oms.service.OrderReturnReasonService;
 
 
 /**
- * 退货原因表
+ * 退货原因
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 15:02:51
+ * @date 2020-05-10 20:47:24
  */
-@Api(tags = "退货原因表 管理")
+@Api(tags = "退货原因 管理")
 @RestController
 @RequestMapping("oms/orderreturnreason")
 public class OrderReturnReasonController {

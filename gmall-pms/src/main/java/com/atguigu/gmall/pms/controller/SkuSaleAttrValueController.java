@@ -20,13 +20,13 @@ import com.atguigu.gmall.pms.service.SkuSaleAttrValueService;
 
 
 /**
- * sku销售属性值
+ * sku销售属性&值
  *
  * @author lixianfeng
  * @email lxf@atguigu.com
- * @date 2020-05-09 13:29:07
+ * @date 2020-05-10 20:48:46
  */
-@Api(tags = "sku销售属性值 管理")
+@Api(tags = "sku销售属性&值 管理")
 @RestController
 @RequestMapping("pms/skusaleattrvalue")
 public class SkuSaleAttrValueController {
